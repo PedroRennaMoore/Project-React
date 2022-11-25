@@ -3,11 +3,8 @@ import { useState } from 'react'
 function RegisterForm() {
     function RegisterUser(e) {
         e.preventDefault()
-        console.log(name)
-        console.log(password)
-        console.log(email)
-        console.log(adress)
-        console.log("User Registered")
+        console.log(`user: ${name}, password: ${password}, email: ${email}, adress: ${adress}.`)
+        console.log("User Registered") 
     }
 
     const [name, setName] = useState()
@@ -28,6 +25,7 @@ function RegisterForm() {
                 placeholder="Name" 
                 onChange={(e) => setName(e.target.value)}
                 />
+                <div className="formError"></div>
             </div>
             <div className="RegisterForm">
                 <label htmlFor="form_password"></label>
@@ -38,6 +36,7 @@ function RegisterForm() {
                  placeholder="Password" 
                  onChange={(e) => setPassword(e.target.value)}
                  />
+                 <div className="formError"></div>
             </div>
             <div className="RegisterForm">
                 <label htmlFor="form_email"></label>
@@ -48,6 +47,7 @@ function RegisterForm() {
                 placeholder="Email"
                 onChange={(e) => setEmail(e.target.value)}
                 />
+                <div className="formError"></div>
             </div>
             <div className="RegisterForm">
                 <label htmlFor="form_adress"></label>
@@ -58,6 +58,7 @@ function RegisterForm() {
                 placeholder="Adress"
                 onChange={(e) => setAdress(e.target.value)}
                 />
+                <div className="formError"></div>
             </div>
             <input type="submit" value="Register" />
         </form>
