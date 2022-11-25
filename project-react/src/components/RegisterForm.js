@@ -32,7 +32,7 @@ function RegisterForm() {
             <div className="RegisterForm">
                 <label htmlFor="form_password"></label>
                 <input
-                 type="text"
+                 type="password"
                  name="form_password" 
                  id="form_password" 
                  placeholder="Password" 
